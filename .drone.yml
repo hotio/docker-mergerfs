@@ -25,7 +25,7 @@ steps:
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
     build_args:
-      - MERGERFS_VERSION=${MERGERFS_VERSION=bed493e8dd44957d159e8dbaa5b3e33310bb4eba}
+      - MERGERFS_VERSION=${MERGERFS_VERSION=3f593d9c3b132400f86643f2faf570ae2152bb66}
 
 ---
 kind: pipeline
@@ -81,7 +81,7 @@ steps:
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
     build_args:
-      - MERGERFS_VERSION=${MERGERFS_VERSION=bed493e8dd44957d159e8dbaa5b3e33310bb4eba}
+      - MERGERFS_VERSION=${MERGERFS_VERSION=3f593d9c3b132400f86643f2faf570ae2152bb66}
 
 ---
 kind: pipeline
@@ -137,7 +137,7 @@ steps:
     tags:
       - ${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-${DRONE_STAGE_OS}-${DRONE_STAGE_ARCH}
     build_args:
-      - MERGERFS_VERSION=${MERGERFS_VERSION=bed493e8dd44957d159e8dbaa5b3e33310bb4eba}
+      - MERGERFS_VERSION=${MERGERFS_VERSION=3f593d9c3b132400f86643f2faf570ae2152bb66}
 
 ---
 kind: pipeline
@@ -238,7 +238,7 @@ steps:
       from_secret: docker_username
     password:
       from_secret: docker_password
-    target: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME##docker-}:${DRONE_COMMIT_BRANCH}-${MERGERFS_VERSION=bed493e8dd44957d159e8dbaa5b3e33310bb4eba}
+    target: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME##docker-}:${DRONE_COMMIT_BRANCH}-${MERGERFS_VERSION=3f593d9c3b132400f86643f2faf570ae2152bb66}
     template: ${DRONE_REPO_OWNER}/${DRONE_REPO_NAME##docker-}:${DRONE_COMMIT_BRANCH}-${DRONE_COMMIT_SHA:0:7}-${DRONE_BUILD_NUMBER}-OS-ARCH
     platforms:
       - linux/amd64
@@ -270,7 +270,7 @@ steps:
       from_secret: discord_id
     DISCORD_TOKEN:
       from_secret: discord_token
-    VERSION_FIELD: ${MERGERFS_VERSION=bed493e8dd44957d159e8dbaa5b3e33310bb4eba}
+    VERSION_FIELD: ${MERGERFS_VERSION=3f593d9c3b132400f86643f2faf570ae2152bb66}
   commands:
     - curl -fsSL https://gist.githubusercontent.com/hotio/d490b6447ddde9634475ddacbc85d8c1/raw/discord-build-notify.sh > discord-build-notify.sh
     - bash discord-build-notify.sh

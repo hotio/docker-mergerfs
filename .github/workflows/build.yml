@@ -62,8 +62,8 @@ jobs:
 
       - name: Show version
         run: |
-          result=$(docker run --rm --entrypoint="" ${GITHUB_REPOSITORY//docker-/}:${GITHUB_REF//refs\/heads\//}-${GITHUB_SHA:0:7}-${GITHUB_RUN_NUMBER}-${{ matrix.architecture }} mergerfs --version)
-          grep 'mergerfs version:' <<< ${result} > /dev/null || exit 1
+          echo "mergerfs --version | grep 'mergerfs version:' && exit 0" > ${GITHUB_WORKSPACE}/mergerfstest.sh
+          docker run --rm --entrypoint="" -v ${GITHUB_WORKSPACE}:${GITHUB_WORKSPACE} ${GITHUB_REPOSITORY//docker-/}:${GITHUB_REF//refs\/heads\//}-${GITHUB_SHA:0:7}-${GITHUB_RUN_NUMBER}-${{ matrix.architecture }} sh ${GITHUB_WORKSPACE}/mergerfstest.sh
 
   publish:
     runs-on: ubuntu-20.04

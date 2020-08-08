@@ -8,7 +8,7 @@ ARG MERGERFS_VERSION
 # install mergerfs
 RUN git clone -n https://github.com/trapexit/mergerfs.git /mergerfs && cd /mergerfs && \
     git checkout ${MERGERFS_VERSION} -b hotio && \
-    make && make install
+    make STATIC=1 LTO=1 && make install
 
 
 FROM alpine@sha256:19c4e520fa84832d6deab48cd911067e6d8b0a9fa73fc054c7b9031f1d89e4cf

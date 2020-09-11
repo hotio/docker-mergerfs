@@ -48,8 +48,8 @@ jobs:
             --build-arg LABEL_SOURCE="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/tree/${GITHUB_REF//refs\/heads\//}" \
             --build-arg LABEL_VENDOR="${GITHUB_REPOSITORY%/*}" \
             --build-arg LABEL_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/blob/master/README.md" \
-            --build-arg LABEL_VERSION="${MERGERFS_VERSION=b1c6d4864fdbbf3a86714c72abdd131536ee8ff6}" \
-            --build-arg MERGERFS_VERSION="${MERGERFS_VERSION=b1c6d4864fdbbf3a86714c72abdd131536ee8ff6}" \
+            --build-arg LABEL_VERSION="${MERGERFS_VERSION=668ac4000ad66ce30473521f221f2239cb60f0a8}" \
+            --build-arg MERGERFS_VERSION="${MERGERFS_VERSION=668ac4000ad66ce30473521f221f2239cb60f0a8}" \
             --file ./${ARCHITECTURE}.Dockerfile ./
 
       - name: Push to GitHub registry
@@ -104,8 +104,8 @@ jobs:
             TAG="${TAG_BASE}-${GITHUB_SHA:0:7}-${GITHUB_RUN_NUMBER}"
             docker manifest create ${registry}/${TAG_BASE} --amend ${registry}/${TAG}-linux-amd64 --amend ${registry}/${TAG}-linux-arm-v7 --amend ${registry}/${TAG}-linux-arm64
             docker manifest push   ${registry}/${TAG_BASE}
-            docker manifest create ${registry}/${TAG_BASE}-${MERGERFS_VERSION=b1c6d4864fdbbf3a86714c72abdd131536ee8ff6} --amend ${registry}/${TAG}-linux-amd64 --amend ${registry}/${TAG}-linux-arm-v7 --amend ${registry}/${TAG}-linux-arm64
-            docker manifest push   ${registry}/${TAG_BASE}-${MERGERFS_VERSION=b1c6d4864fdbbf3a86714c72abdd131536ee8ff6}
+            docker manifest create ${registry}/${TAG_BASE}-${MERGERFS_VERSION=668ac4000ad66ce30473521f221f2239cb60f0a8} --amend ${registry}/${TAG}-linux-amd64 --amend ${registry}/${TAG}-linux-arm-v7 --amend ${registry}/${TAG}-linux-arm64
+            docker manifest push   ${registry}/${TAG_BASE}-${MERGERFS_VERSION=668ac4000ad66ce30473521f221f2239cb60f0a8}
             docker manifest create ${registry}/${TAG_BASE}-${GITHUB_SHA:0:7} --amend ${registry}/${TAG}-linux-amd64 --amend ${registry}/${TAG}-linux-arm-v7 --amend ${registry}/${TAG}-linux-arm64
             docker manifest push   ${registry}/${TAG_BASE}-${GITHUB_SHA:0:7}
             if [[ ${GITHUB_REF//refs\/heads\//} == stable ]]; then
@@ -120,4 +120,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           curl -u "${GITHUB_REPOSITORY%/*}:${GITHUB_TOKEN}" -fsSL https://gist.githubusercontent.com/${GITHUB_REPOSITORY%/*}/3d98159d47e0bf5eccbff221f1288472/raw/discord-action-notify.sh > discord-action-notify.sh
-          export VERSION_FIELD=${MERGERFS_VERSION=b1c6d4864fdbbf3a86714c72abdd131536ee8ff6} && bash discord-action-notify.sh
+          export VERSION_FIELD=${MERGERFS_VERSION=668ac4000ad66ce30473521f221f2239cb60f0a8} && bash discord-action-notify.sh

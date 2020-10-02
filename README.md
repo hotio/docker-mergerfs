@@ -1,6 +1,6 @@
 # mergerfs
 
-<img src="https://hotio.dev/img/mergerfs.png" alt="Logo" height="130" width="130">
+![logo](https://hotio.dev/img/mergerfs.png)
 
 ![Base](https://img.shields.io/badge/base-alpine-blue)
 [![GitHub](https://img.shields.io/badge/source-github-lightgrey)](https://github.com/hotio/docker-mergerfs)

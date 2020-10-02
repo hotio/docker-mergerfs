@@ -21,10 +21,10 @@ The default `ENTRYPOINT` is `mergerfs -f`.
 
 ## Tags
 
-| Tag              | Upstream                      |
-| -----------------|-------------------------------|
-| release (latest) | GitHub releases               |
-| nightly          | Every commit to master branch |
+| Tag                | Upstream                      |
+| -------------------|-------------------------------|
+| `release` (latest) | GitHub releases               |
+| `nightly`          | Every commit to master branch |
 
 You can also find tags that reference a commit or version number.
 

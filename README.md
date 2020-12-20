@@ -1,6 +1,6 @@
 [<img src="https://hotio.dev/img/mergerfs.png" alt="logo" height="130" width="130">](https://github.com/trapexit/mergerfs)
 
-[![GitHub Source](https://img.shields.io/badge/github-source-ffb64c?style=flat-square&logo=github&logoColor=white&labelColor=757575)](https://github.com/docker-hotio/docker-mergerfs)
+[![GitHub Source](https://img.shields.io/badge/github-source-ffb64c?style=flat-square&logo=github&logoColor=white&labelColor=757575)](https://github.com/hotio/mergerfs)
 [![GitHub Registry](https://img.shields.io/badge/github-registry-ffb64c?style=flat-square&logo=github&logoColor=white&labelColor=757575)](https://github.com/users/hotio/packages/container/package/mergerfs)
 [![Docker Pulls](https://img.shields.io/docker/pulls/hotio/mergerfs?color=ffb64c&style=flat-square&label=pulls&logo=docker&logoColor=white&labelColor=757575)](https://hub.docker.com/r/hotio/mergerfs)
 [![Discord](https://img.shields.io/discord/610068305893523457?style=flat-square&color=ffb64c&label=discord&logo=discord&logoColor=white&labelColor=757575)](https://hotio.dev/discord)
@@ -21,8 +21,8 @@ The default `ENTRYPOINT` is `mergerfs -f`.
 
 | Tag                | Upstream                      | Version | Build |
 | -------------------|-------------------------------|---------|-------|
-| `release` (latest) | GitHub releases               | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdocker-hotio%2Fdocker-mergerfs%2Frelease%2FVERSION.json) | ![build](https://img.shields.io/github/workflow/status/docker-hotio/docker-mergerfs/build/release?style=flat-square&label=) |
-| `nightly`          | Every commit to master branch | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fdocker-hotio%2Fdocker-mergerfs%2Fnightly%2FVERSION.json) | ![build](https://img.shields.io/github/workflow/status/docker-hotio/docker-mergerfs/build/nightly?style=flat-square&label=) |
+| `release` (latest) | GitHub releases               | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fmergerfs%2Frelease%2FVERSION.json) | ![build](https://img.shields.io/github/workflow/status/hotio/mergerfs/build/release?style=flat-square&label=) |
+| `nightly`          | Every commit to master branch | ![version](https://img.shields.io/badge/dynamic/json?color=f5f5f5&style=flat-square&label=&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fmergerfs%2Fnightly%2FVERSION.json) | ![build](https://img.shields.io/github/workflow/status/hotio/mergerfs/build/nightly?style=flat-square&label=) |
 
 You can also find tags that reference a commit or version number.
 

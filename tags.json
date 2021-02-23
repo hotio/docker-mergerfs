@@ -1,25 +1,25 @@
 {
   "tags": [
-      {
+    {
       "name": "release",
-      "version": "",
-      "commit": "",
+      "version": "2.32.4",
+      "commit": "e3cda23",
       "upstream": "Releases",
-      "lastUpdated": ""
-      },
-      {
+      "lastUpdated": "2021-02-23T14:33:11.116Z"
+    },
+    {
       "name": "testing",
       "version": "",
       "commit": "",
       "upstream": "",
       "lastUpdated": ""
-      },
-      {
+    },
+    {
       "name": "nightly",
       "version": "",
       "commit": "",
       "upstream": "Every commit to master",
       "lastUpdated": ""
-      }
+    }
   ]
 }

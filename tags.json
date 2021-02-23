@@ -4,7 +4,7 @@
       "name": "release",
       "version": "",
       "commit": "",
-      "upstream": "",
+      "upstream": "Releases",
       "lastUpdated": ""
       },
       {
@@ -18,7 +18,7 @@
       "name": "nightly",
       "version": "",
       "commit": "",
-      "upstream": "",
+      "upstream": "Every commit to master",
       "lastUpdated": ""
       }
   ]

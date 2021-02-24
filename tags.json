@@ -21,5 +21,7 @@
       "upstream": "Every commit to master",
       "lastUpdated": "2021-02-23T14:33:56.934Z"
     }
-  ]
+  ],
+  "pulls": 147894,
+  "stars": 6
 }

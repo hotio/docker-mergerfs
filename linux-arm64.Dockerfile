@@ -11,7 +11,7 @@ RUN git clone -n https://github.com/trapexit/mergerfs.git /mergerfs && cd /merge
     make STATIC=1 LTO=1 && make install
 
 
-FROM alpine@sha256:31605c2bc05b020943d5c20a108f4bfe1af47e0a818e94411041805d1374ab42
+FROM alpine@sha256:071fa5de01a240dbef5be09d69f8fef2f89d68445d9175393773ee389b6f5935
 LABEL maintainer="hotio"
 
 ENTRYPOINT ["mergerfs", "-f"]
